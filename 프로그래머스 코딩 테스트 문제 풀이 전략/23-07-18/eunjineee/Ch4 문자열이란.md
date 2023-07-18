@@ -26,3 +26,17 @@ String.toCharArray()        //모든 문자가 들어있는 char[]형식의 데�
 | 아스키 코드 | 48   | 49   | 50   | 51   | 52   | 53   | 54   | 55   | 56   | 57   |
 
 내장 라이브 러리  : `Character.getNumericValue(digit)`
+
+
+
+#### 문자를 정수로 바꾸는 방법
+
+``` java
+char digit = '9';
+int digitToInt = digit - '0'; // 문자에서 아스키코드를 빼면 해당 문자가 표현하는 정수 값이 나옴
+
+//내장 라이브러리 이용
+char digit = '9';
+int digitToInt = Character.getNumericValue(digit);
+```
+
