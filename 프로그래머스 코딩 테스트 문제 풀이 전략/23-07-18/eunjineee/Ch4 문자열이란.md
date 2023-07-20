@@ -39,4 +39,3 @@ int digitToInt = digit - '0'; // 문자에서 아스키코드를 빼면 해당 �
 char digit = '9';
 int digitToInt = Character.getNumericValue(digit);
 ```
-
