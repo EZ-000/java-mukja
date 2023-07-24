@@ -107,3 +107,20 @@ System.out.println(az);
 ```
 
 각 반복문에서 O(1)의 시간 복잡도를 가지기 때문에 O(N) 시간이 걸림
+
+
+
+## 4.2 문자열 다루어 보기
+
+#### Sring 클래스에서 자주 사용되는 메서드
+
+| 메서드                                  | 반환형  | 내용                                             |
+| --------------------------------------- | ------- | ------------------------------------------------ |
+| equals(String other)                    | boolean | 문자열이 other와 같은 문자열을 담고 있는지 반환  |
+| length()                                | int     | 문자열 길이를 반환                               |
+| substring(int beginIndex, int endIndex) | String  | 문자열의 beginIndex부터 endIndex까지 잘라서 반환 |
+| toUpperCase()                           | String  | 모든 알파벳이 대문자로 변환된 문자열을 반환      |
+| toLowerCase()                           | String  | 모든 알파벳이 소문자로 변환된 문자열을 반환      |
+
+** 문자열은 객체이기 때문에 `equals()`를 사용해야 함 (`==` ~~사용 불가~~)
+
