@@ -124,3 +124,33 @@ System.out.println(az);
 
 ** 문자열은 객체이기 때문에 `equals()`를 사용해야 함 (`==` ~~사용 불가~~)
 
+
+
+### 진법 바꾸기
+
+#### 문자열과 정수를 변환하는 메서드
+
+| 메서드                     | 반환형 | 내용                                   |
+| -------------------------- | ------ | -------------------------------------- |
+| Integer.parseInt(String s) | int    | 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Integer.toString(int v)    | String | 정수 v를 문자열로 변환                 |
+| Long.parseLong(String s)   | long   | 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Long.toString(long v)      | String | 정수 v를 문자열로 변환                 |
+
+#### 문자열과 정수를 진법에 따라 변환하는 메서드
+
+| 메서드                                | 반환형 | 내용                                                  |
+| ------------------------------------- | ------ | ----------------------------------------------------- |
+| Integer.parseInt(String s, int radix) | int    | radix 진법으로 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Integer.toString(int v, int radix)    | String | 정수 v를 radix 진법의 문자열로 변환                   |
+| Long.parseLong(String s, int radix)   | long   | radix 진법으로 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Long.toString(long v, int radix)      | String | 정수 v를 radix 진법의 문자열로 변환                   |
+
+##### 진법 바꾸기 사용 예시
+
+```java
+String binary = "1010";
+int value = Integer.parseInt(binary, 2);       // value = 10
+String hex = Integer.toString(value, 16);      // hex = a
+```
+
