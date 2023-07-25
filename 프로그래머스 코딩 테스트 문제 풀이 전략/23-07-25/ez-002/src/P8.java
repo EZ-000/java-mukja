@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class P8 {
                 if (cnt == 1) {
                     builder.append(now);
                 } else {
-                    builder.append(cnt + "" + now);
+                    builder.append(cnt).append(now);
                 }
                 cnt = 1;
             }
