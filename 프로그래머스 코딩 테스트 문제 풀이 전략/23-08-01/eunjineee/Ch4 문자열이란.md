@@ -219,5 +219,9 @@ String hex = Integer.toString(value, 16);      // hex = a
 ```java
 //문자열에 소문자가 몇 번 등장하는지 모르기 때문에 *로 정규표현식을 구성
 boolean matches("[a-z]*");
-```
 
+//백스페이스는 자바에서도 escape sequence 역할을 함. 
+//정규표현식에 제대로 된 백스페이스를 넣어 주려면 자바에서도 백스페이스를 사용하여 백스페이스 문자를 문자열에 포함해주어야함
+s = s.replaceAll("[^a-z0-9\\-_.]","");
+
+```
