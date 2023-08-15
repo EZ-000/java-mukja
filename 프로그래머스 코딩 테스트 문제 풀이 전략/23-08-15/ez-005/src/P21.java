@@ -13,24 +13,23 @@ public class P21 {
         return true;
     }
 
-    private Set<Integer> getPrimes(int acc, List<Integer> numbers) {
-        Set<Integer> primes = new HashSet<>();
+    private void getPrimes(int acc, int[] numbers, boolean[] isUsed, Set<Integer> primes) {
         if (isPrime(acc)) primes.add(acc);
 
-        for (int i = 0; i < numbers.size(); i++) {
-            int nextAcc = acc * 10 + numbers.get(i);
-            List<Integer> nextNumbers = new ArrayList<>(numbers);
-            nextNumbers.remove(i);
-            primes.addAll(getPrimes(nextAcc, nextNumbers));
+        for (int i = 0; i < numbers.length ; i++) {
+            if (isUsed[i]) continue;
+            int nextAcc = acc * 10 + numbers[i];
+
+            isUsed[i] = true;
+            getPrimes(nextAcc, numbers, isUsed, primes);
+            isUsed[i] = false;
         }
-        return primes;
     }
 
     public int solution(String numbers) {
-        List<Integer> nums = numbers.chars()
-                .map(c -> c - '0')
-                .boxed()
-                .collect(Collectors.toList());
-        return getPrimes(0, nums).size();
+        Set<Integer> primes = new HashSet<>();
+        int[] nums = numbers.chars().map(c -> c - '0').toArray();
+        getPrimes(0, nums, new boolean[nums.length], primes);
+        return primes.size();
     }
 }
