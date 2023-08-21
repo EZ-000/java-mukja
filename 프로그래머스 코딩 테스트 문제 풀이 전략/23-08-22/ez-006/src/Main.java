@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        P26 p26 = new P26();
+        p26.solution1("Zbcdefg");
     }
 }
