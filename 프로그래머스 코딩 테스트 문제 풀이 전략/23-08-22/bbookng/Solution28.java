@@ -1,4 +1,4 @@
-import java.util.Arrays;
+기import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class 가장_큰_수 {
