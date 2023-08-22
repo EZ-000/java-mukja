@@ -36,7 +36,6 @@ public class 메뉴리뉴얼_책 {
                 courseList.add(course);
             }
         }
-
         if (size >= 10) return;
         for (char menuChar = nextMenu; menuChar <= 'Z'; menuChar++) {
             String menu = String.valueOf(menuChar);
