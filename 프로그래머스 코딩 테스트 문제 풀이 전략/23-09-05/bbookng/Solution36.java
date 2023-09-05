@@ -19,7 +19,6 @@ public class Solution36 {
         for (int number : set) {
             sum += number;
         }
-
         return sum;
     }
 }
